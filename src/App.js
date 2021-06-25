@@ -1,8 +1,9 @@
 import Header from "./Header";
+import Footer from "./Footer";
 
 function App() {
   return (
-    <div>
+    <>
       <Header title="kalkulator walut" />
       <main className="main">
         <form className="js-form">
@@ -34,8 +35,8 @@ function App() {
           href="https://www.nbp.pl/home.aspx?f=/statystyka/kursy.html">
           Aktualne kursy walut NBP </a>
       </main>
-      <footer className="footer">&copy; Anna Śnieguła 2021 </footer>
-    </div>
+      <Footer author="&copy; Anna Śnieguła 2021" />
+    </>
 
   );
 }
