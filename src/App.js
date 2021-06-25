@@ -1,11 +1,12 @@
 import Header from "./Header";
 import Footer from "./Footer";
+import Container from "./Container";
 
 function App() {
   return (
     <>
       <Header title="kalkulator walut" />
-      <main className="main">
+      <Container>
         <form className="js-form">
           <fieldset className="fieldset">
             <p>
@@ -31,10 +32,8 @@ function App() {
             <p>Otrzymasz: <strong className="js-result"></strong></p>
           </fieldset>
         </form>
-        <a className="main__link" rel="noreferrer noopener" target="_blank"
-          href="https://www.nbp.pl/home.aspx?f=/statystyka/kursy.html">
-          Aktualne kursy walut NBP </a>
-      </main>
+     
+      </Container>
       <Footer author="&copy; Anna Śnieguła 2021" />
     </>
 
