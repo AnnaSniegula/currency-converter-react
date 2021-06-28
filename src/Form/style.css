@@ -5,3 +5,8 @@
 .form__comment{
     font-size: 12px; 
 }
+
+.form__button{
+    margin: 7px;
+    cursor: pointer;
+}

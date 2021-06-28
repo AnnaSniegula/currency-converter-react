@@ -25,6 +25,12 @@ export const Form = () => {
         calculateResault(currency, amount);
     };
 
+    const resetForm = () => {
+        setAmount("");
+        setCurrency(currencies[0].short);
+        setResult("");
+    };
+ 
     return (
         <form className="form" onSubmit={onSubmit}>
             <fieldset className="form__fieldset">
@@ -36,7 +42,7 @@ export const Form = () => {
                             name="currencyPLN"
                             min="1"
                             step="any"
-                            autofocus
+                            autoFocus
                             required
                             value={amount}
                             onChange={({ target }) => setAmount(target.value)}
@@ -60,8 +66,8 @@ export const Form = () => {
                 </p>
                 <p className="form__comment">Pole oznaczone * są wymagane</p>
                 <p>
-                    <button type="submit">Przelicz</button>
-                    <button type="reset">Wyczyść</button>
+                    <button className="form__button" type="submit">Przelicz</button>
+                    <button className="form__button" onClick={resetForm} type="reset">Wyczyść</button>
                 </p>
                 <Result result={result} />
             </fieldset>
