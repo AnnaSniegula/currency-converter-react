@@ -28,9 +28,9 @@ export const Form = () => {
     const resetForm = () => {
         setAmount("");
         setCurrency(currencies[0].short);
-        setResult("");
+        setResult(undefined);
     };
- 
+
     return (
         <form className="form" onSubmit={onSubmit}>
             <fieldset className="form__fieldset">
@@ -51,7 +51,7 @@ export const Form = () => {
                 </p>
                 <p>
                     <label>
-                        Wybierz walutę:
+                        <span>Wybierz walutę: </span>
                         <select
                             value={currency}
                             onChange={({ target }) => setCurrency(target.value)}
