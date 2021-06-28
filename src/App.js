@@ -12,7 +12,6 @@ function App() {
       </Container>
       <Footer author="&copy; Anna Śnieguła 2021" />
     </>
-
   );
 }
 
