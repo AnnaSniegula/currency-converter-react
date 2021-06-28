@@ -6,7 +6,7 @@ import Form from "./Form";
 function App() {
   return (
     <>
-      <Header title="kalkulator walut" />
+      <Header title="kalkulator walutowy" />
       <Container>
         <Form />
       </Container>
