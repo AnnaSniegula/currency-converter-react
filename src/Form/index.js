@@ -1,6 +1,7 @@
 import "./style.css";
 import { currencies } from "./currencies.js";
 import { useState } from "react";
+import { Result } from "./Result";
 
 export const Form = () => {
     const [currency, setCurrency] = useState(currencies[0].short);
@@ -62,10 +63,9 @@ export const Form = () => {
                     <button type="submit">Przelicz</button>
                     <button type="reset">Wyczyść</button>
                 </p>
-                <p>Otrzymasz: <strong></strong></p>
+                <Result result={result} />
             </fieldset>
         </form>
-
     );
 };
 
