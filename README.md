@@ -1,3 +1,30 @@
+# currency converter Aplication in React
+
+## Demo https://annasniegula.github.io/currency-converter-react/
+
+## Description
+
+## Prewiev
+
+![prewiev of application] (Animation (1).gif)
+
+
+## Instruction
+
+
+## Technology used to build this page:
+
+* HTML
+* CSS
+* JavaScript
+* BEM
+* GIT
+* React
+* CreatReactApp
+* Babel
+* WebPack
+* Hooks
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
