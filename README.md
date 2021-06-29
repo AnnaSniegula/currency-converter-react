@@ -5,8 +5,7 @@
 ## Description
 
 ## Prewiev
-
-![prewiev of application] (https://github.com/AnnaSniegula/currency-converter-react/blob/main/public/Animation%20(1).gif)
+![Animation%20(1).gif] (https://github.com/AnnaSniegula/currency-converter-react/blob/main/public/Animation%20(1).gif)
 
 
 ## Instruction
