@@ -3,13 +3,12 @@
 ## Demo https://annasniegula.github.io/currency-converter-react/
 
 ## Description
+This app:
+- converts PLN to EUR or USD with default rate
+- removes input and result
 
 ## Prewiev
-![] (https://github.com/AnnaSniegula/currency-converter-react/blob/main/public/Animation%20(1).gif)
-
-
-## Instruction
-
+![animation](https://github.com/AnnaSniegula/currency-converter-react/blob/main/public/Animation%20(1).gif)
 
 ## Technology used to build this page:
 
