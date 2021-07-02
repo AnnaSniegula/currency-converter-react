@@ -3,7 +3,8 @@ export const Result = ({ result }) => (
         {result !== undefined && (
             <>
                 Otrzymasz : &nbsp;
-                <strong>  {result.targetAmount.toFixed(2)}&nbsp;{result.currency}
+                <strong>  
+                    {result.targetAmount.toFixed(2)}&nbsp;{result.currency}
                 </strong>
             </>
         )}

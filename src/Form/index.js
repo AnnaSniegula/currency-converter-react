@@ -6,7 +6,6 @@ import { Result } from "./Result";
 export const Form = () => {
     const [currency, setCurrency] = useState(currencies[0].short);
 
-
     const [result, setResult] = useState();
     const calculateResault = (currency, amount) => {
         const rate = currencies.find(({ short }) => short === currency).rate;
@@ -15,7 +14,6 @@ export const Form = () => {
             targetAmount: amount / rate,
             currency,
         });
-
     };
 
     const [amount, setAmount] = useState("");
