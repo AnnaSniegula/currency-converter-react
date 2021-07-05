@@ -6,7 +6,7 @@ html {
   box-sizing: inherit;
 }
 
-#root {
+body {
   font-family: 'Lato', sans-serif;
   margin: 0 auto;
   line-height: 1.5;
