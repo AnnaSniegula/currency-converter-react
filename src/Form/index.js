@@ -1,7 +1,7 @@
-import "./style.css";
 import { currencies } from "./currencies.js";
 import { useState } from "react";
 import { Result } from "./Result";
+import { FormFieldset, FormComment, FormButton } from "./styled";
 
 export const Form = () => {
     const [currency, setCurrency] = useState(currencies[0].short);
@@ -31,7 +31,7 @@ export const Form = () => {
 
     return (
         <form className="form" onSubmit={onSubmit}>
-            <fieldset className="form__fieldset">
+            <FormFieldset>
                 <p>
                     <label>
                         Podaj kwotę w PLN *
@@ -62,13 +62,13 @@ export const Form = () => {
                         </select>
                     </label>
                 </p>
-                <p className="form__comment">Pole oznaczone * są wymagane</p>
+                <FormComment>Pole oznaczone * są wymagane</FormComment>
                 <p>
-                    <button className="form__button" type="submit">Przelicz</button>
-                    <button className="form__button" onClick={resetForm} type="reset">Wyczyść</button>
+                    <FormButton type="submit">Przelicz</FormButton>
+                    <FormButton onClick={resetForm} type="reset">Wyczyść</FormButton>
                 </p>
                 <Result result={result} />
-            </fieldset>
+            </FormFieldset>
         </form>
     );
 };
