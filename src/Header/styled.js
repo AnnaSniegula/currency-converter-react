@@ -1,7 +1,9 @@
-.header {
+import styled from "styled-components";
+
+export const StyledHeader = styled.header`
     font-size: 25px;
     font-weight: 700;
     color: #892d8beb;
     text-transform: uppercase;
     padding: 60px;
-}
+`;
