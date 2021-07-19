@@ -30,7 +30,7 @@ export const Form = () => {
     };
 
     return (
-        <form className="form" onSubmit={onSubmit}>
+        <form onSubmit={onSubmit}>
             <FormFieldset>
                 <p>
                     <label>
