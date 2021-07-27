@@ -15,6 +15,6 @@ function App() {
       <Footer author="&copy; Anna Śnieguła 2021" />
     </>
   );
-}
+};
 
 export default App;
