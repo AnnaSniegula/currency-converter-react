@@ -1,14 +1,14 @@
-import { currencies } from "./currencies.js";
 import { useState } from "react";
 import { Result } from "./Result";
-import { FormFieldset, FormComment, FormButton } from "./styled";
+import { FormFieldset, FormComment, FormButton, Failure, Loading } from "./styled";
+import { useRatesData } from "./useRatesData";
 
 export const Form = () => {
-    const [currency, setCurrency] = useState(currencies[0].short);
-
     const [result, setResult] = useState();
+    const ratesData = useRatesData();
+
     const calculateResault = (currency, amount) => {
-        const rate = currencies.find(({ short }) => short === currency).rate;
+        const rate = ratesData.rates[currency];
 
         setResult({
             targetAmount: amount / rate,
@@ -16,6 +16,7 @@ export const Form = () => {
         });
     };
 
+    const [currency, setCurrency] = useState("EUR");
     const [amount, setAmount] = useState("");
 
     const onSubmit = (event) => {
@@ -24,13 +25,27 @@ export const Form = () => {
     };
 
     const resetForm = () => {
-        setAmount("");
-        setCurrency(currencies[0].short);
+        setCurrency(currency[0]);
         setResult(undefined);
+        setAmount("");
     };
 
     return (
         <form onSubmit={onSubmit}>
+            {ratesData.state === "loading"
+                ? (
+                    <Loading>
+                        <p>Ładuję kursy z Europejskiego Banku Centralnego</p>
+                    </Loading>
+                )
+                : (
+                    ratesData.state === "error" ? (
+                        <Failure>
+                            Coś jest nie tak. Srprawdź połączenie z internetem.
+                        </Failure>
+                    ) : (
+            
+            
             <FormFieldset>
                 <p>
                     <label>
@@ -54,11 +69,14 @@ export const Form = () => {
                             value={currency}
                             onChange={({ target }) => setCurrency(target.value)}
                         >
-                            {currencies.map((currency) => (
-                                <option key={currency.short} value={currency.short}>
-                                    {currency.short}
+                            {!!ratesData.rates && Object.keys(ratesData.rates).map(((currency) => (
+                                <option
+                                    key={currency}
+                                    value={currency}
+                                >
+                                    {currency}
                                 </option>
-                            ))}
+                            )))}
                         </select>
                     </label>
                 </p>
@@ -69,6 +87,8 @@ export const Form = () => {
                 </p>
                 <Result result={result} />
             </FormFieldset>
+                    )
+                    )}
         </form>
     );
 };
