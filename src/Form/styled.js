@@ -13,3 +13,12 @@ export const FormButton = styled.button`
     cursor: pointer;
 `;
 
+export const Failure = styled.p`
+color: ${({ theme }) => theme.colors.crimson};
+`;
+
+export const Loading = styled.p`
+color: ${({ theme }) => theme.colors.violet};
+`;
+
+
