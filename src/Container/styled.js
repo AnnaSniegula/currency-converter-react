@@ -12,12 +12,3 @@ export const StyledContainer = styled.main`
     display: inline-block;
 `;
 
-export const Link = styled.a`
-    color: ${({ theme }) => theme.colors.violet};
-    text-decoration: none;
-
-    &:hover {
-        color: ${({ theme }) => theme.colors.black};   
-    }
-`;
-
